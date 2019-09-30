@@ -1,7 +1,5 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-p {
-  text-align: justify;
-}
+@import "jekyll-theme-cayman";
+text-align: justify;
