@@ -33,7 +33,7 @@ Table 2. Number of bytes needed to represent a character
 |:------:|:------:|
 |1-4|2 or 4|
 
-For example, the character with the UCS code _U+0061_ (lowercase Latin “a”) is encoded in UTF-8 as _61_ (_0110000_)and uses one byte, and in UTF-16 it’s encoded as _0061_ and uses 2 bytes. . The character with a more complicated code _U+1D11E_ (G-clef "&#119070;") is encoded in UTF-8 as _F0 9D 84 9E_ (_11110000:10011101:10000100:10011110_), using as many as 4 bytes, and in UTF-16 as the surrogate pair _D834 DD1E_ (high surrogate _U+D834_ plus low surrogate _U+DD1E_), also 4 bytes.
+For example, the character with the UCS code _U+0061_ (lowercase Latin “a”) is encoded in UTF-8 as _61_ (_0110000_) and uses one byte, and in UTF-16 it’s encoded as _0061_ and uses 2 bytes. . The character with a more complicated code _U+1D11E_ (G-clef "&#119070;") is encoded in UTF-8 as _F0 9D 84 9E_ (_11110000:10011101:10000100:10011110_), using as many as 4 bytes, and in UTF-16 as the surrogate pair _D834 DD1E_ (high surrogate _U+D834_ plus low surrogate _U+DD1E_), also 4 bytes.
 
 UTF-8 obviously is more efficient, since it uses less memory in most cases thanks to the smaller code unit size. However, it depends on the writing system: in some cases, for example for Chinese text or musical notation, UTF-8 starts using 3-4 bytes for more complex characters and thus uses more memory than UTF-16, which basically uses 2 bytes for most of the commonly used characters.
 
