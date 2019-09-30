@@ -15,7 +15,7 @@ All three character encoding forms encode the same set of characters (UCS), but 
 
 First of all, different character encoding forms use code units of different sizes, corresponding to the titular number: in UTF-**_8_**, the size of the code unit is 1 byte (**_8_** bits), in UTF-**_16_** – 2 bytes (**_16_** bits).
 
-### Table 1. Code unit size
+_Table 1._ Code unit size
 
 | UTF-8  | UTF-16  |
 |:------:|:------:|
@@ -27,7 +27,7 @@ Keep in mind that both UTF-8 and UTF-16 are variable-length encodings, so these 
 
 * In **UTF-16**, code points U+0000..U+D7FF and U+E000..U+FFFF take up one code unit (=2 bytes) each. These code points correspond to the Basic Multilingual Plane (BMP), which contains the most frequently used characters. The other, less frequently used code points U+10000..U+10FFFF are represented with the use of so called “surrogate pairs” of two code units and correspondingly take up 2 bytes each. Surrogate pairs use the aforementioned reserved code points U+D800…U+DFFF: each surrogate pair consists of a high surrogate from the range U+D800…U+DBFF, followed by a low surrogate from the range U+DC00…U+DFFF. Code points from these ranges cannot be used as stand-alone code points.
 
-Table 2. Number of bytes needed to represent a character
+_Table 2._ Number of bytes needed to represent a character
 
 | UTF-8  | UTF-16  |
 |:------:|:------:|
@@ -39,7 +39,7 @@ UTF-8 obviously is more efficient, since it uses less memory in most cases thank
 
 Another advantage of UTF-8 is that the Basic Latin characters encoded in it with one byte match up to the corresponding ASCII characters 1:1, so UTF-8 is **backward compatible with ASCII**. If a file in UTF-8 consists of only ASCII characters, it is encoded in exactly the same way as the same file in ASCII. One particular practical consequence of this compatibility is that UTF-8 is more convenient for updating legacy applications.
 
-Table 3. Backward compatible with ASCII
+_Table 3._ Backward compatible with ASCII
 
 | UTF-8  | UTF-16  |
 |:------:|:------:|
@@ -47,10 +47,13 @@ Table 3. Backward compatible with ASCII
 
 **UTF-8** is predominately used **for web pages** and in general is the most popular and the most commonly used Unicode encoding (thanks to the advantages described above); but **UTF-16** is used **for internal Unicode representation** in many programming languages (Java, C#, JavaScript), as well as in operating systems, in particular in Windows (but Linux, for example, mostly uses UTF-8). This is the case for a number of reasons, in part just because UTF-16 was easier to convert to from earlier Unicode encodings that also had 2-byte code units.
 
-Table 4. Predominantly used
+_Table 4._ Predominantly used
 
 | UTF-8  | UTF-16  |
 |:------:|:------:|
 |In web pages|In programming languages and operating systems|
 
 In practice that sometimes makes UTF-16 more convenient just because that’s what’s adopted within the platform or programming language.
+
+______
+[Home](index.md)
