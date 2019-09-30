@@ -15,7 +15,7 @@ All three character encoding forms encode the same set of characters (UCS), but 
 
 First of all, different character encoding forms use code units of different sizes, corresponding to the titular number: in UTF-**_8_**, the size of the code unit is 1 byte (**_8_** bits), in UTF-**_16_** – 2 bytes (**_16_** bits).
 
-#### Table 1. Code unit size
+### Table 1. Code unit size
 
 | UTF-8  | UTF-16  |
 |:------:|:------:|
